@@ -1,0 +1,36 @@
+1. Sorolj fel 5 HTML elemet és írd le mire való.
+
+<html> - az oldal váza, ez mindennek a szülőeleme
+<head> - meta tartalom elhelyezése, title módosítása, hivatkozás css-re, stb.
+<body> - az oldal fő tartalmi egysége, amin belül létre tudunk hozni dolgokat
+<nav> - HTML 5 navigációs terület
+<ol> - ordered list -- rendezett, akár számozott lista 
+
+2. Sorolj fel 5 CSS utasítást értékkel együtt és magyarázd el mit csinál.
+
+background-color: white; --- Fehér az adott elem háttérszíne
+font-size: 12px; --- A betűméret 12px nagyságú
+color: #000; --- A betűszín fekete
+padding: 0 3px 0 3px; --- A tartalom, a szülőelemétől számított belső eltartása pixelben
+margin: 5px; --- A tartalom, a szülőelemétől számított külső eltartása pixelben
+
+3. Létrehoztam githubon egy új repository-t írd le a klónozás menetét, majd azt, hogyan töltök fel egy új index.html nevű file-t. A parancsokat is írd le a megfelelő sorrendben.
+
+git clone https://github.com/felhasznalonev/teszt-repo.git
+cd repository-teszt-repo
+touch index.html
+*hozzáadok tartalmat az index.html-hez*
+git add index.html
+git commit -m "Hozzáadtam az index.html fájlt"
+git push .
+
+
+4. Mit jelent a CSS-ben a specificitás? Hogyan számíthatjuk ki egy elem specificitását?
+
+A böngésző specifitás alapján választja ki, hogy milyen stílusbeállítás vonatkozzon egy adott elemre. Minél részletesebben hivatkozunk rá a css ben annál magasabb lesz a specifitása. Az inline stílus hivatkozások mindig nagyobb specifitásúak, mivel közelebb helyezkednek el az adott elemhez.
+
+5. Írj egy HTML kódot, amely elhelyez a weboldalon egy ’dobozt’, amiben egy kép és alatta egy leírás található. Az egész ’doboz’ legyen link a http://www.prooktatas.hu oldalra.
+
+
+
++1. Amint készen vagy küldd el a közös chatbe a github.io-s címed!

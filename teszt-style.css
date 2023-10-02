@@ -1,0 +1,16 @@
+.doboz {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+.doboz a {
+    text-decoration: none;
+}
+.doboz img {
+    max-width: 100%;
+    height: auto;
+}
+.doboz p {
+    color: #222;
+}
