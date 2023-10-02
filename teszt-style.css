@@ -6,6 +6,8 @@
 }
 .doboz a {
     text-decoration: none;
+    width: 100%;
+    height: 100%;
 }
 .doboz img {
     max-width: 100%;
