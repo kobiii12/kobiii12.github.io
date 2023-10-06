@@ -10,3 +10,12 @@ div.container {
     margin: 0 auto;
     background: #676;
 }
+div a {
+    text-align: justify;
+    border: 2px solid red;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div a:hover {
+    border: 4px solid rgb(255, 109, 109);
+}
