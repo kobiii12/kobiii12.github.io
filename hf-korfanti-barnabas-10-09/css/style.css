@@ -1,0 +1,143 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    background-image: url(../image/hatter.png);
+}
+header {
+    background-color: #306B1E;
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 0%;
+    background-image: url(../image/hatter.png);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img {
+    margin-right: 10px;
+}
+header h1, header h3 {
+    text-align: justify;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+nav {
+    overflow: auto;
+    background-color: #52B833;
+    padding: 4px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 2%;
+    display: flex;
+    justify-content: flex-end;
+}
+nav ul li {
+    margin-right: 20px;
+    padding: 0%;
+}
+nav ul li a {
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #333;
+    width: 100%;
+    border-radius: 6px;
+    padding: 6px;
+    background-color: #A1EE8A
+}
+nav ul li a:hover {
+    color: #fff;
+    background-color: #52B833;
+}
+nav ul li#datetime {
+    color: #fff;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left: auto;
+}
+main div.aktualisH, main p.aktualisP {
+    text-align: center;
+}
+main img.aktualisIMG {
+    float: unset;
+}
+main {
+    overflow: auto;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #A1EE8A;
+    border-radius: 6px;
+}
+main ul#mainNav {
+    list-style-type: none;
+    padding: 0px 0px 10px 0px;
+    margin: 16px 0px 16px 0px;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid #333;
+}
+main ul#mainNav li a {
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #333;
+    width: 100%;
+    padding: 6px;
+}
+main div.description ul {
+    font-size: 16px;
+    color: #555;
+    text-align: justify;
+    margin-right: 30px;
+    line-height: 25px;
+}
+main img {
+    float: right;
+    width: 35%;
+    margin-left: 10px;
+    border-radius: 6px;
+}
+main p {
+    color: #555;
+    text-align: justify;
+    hyphens: auto;
+    font-size: 18px;
+    line-height: 25px;
+}
+main p::after {
+    content:"";
+    clear: both;
+    display: table;
+}
+div.description#descriptionUtso {
+    border-bottom: 1px solid #333;
+}
+div.infoLeiras p#infoUtsoP {
+    margin-bottom: 100px;
+}
+div.infoFormok {
+    text-align: center;
+}
+div.infoFormok p {
+    text-align: center;
+}
+div#placeholder {
+    margin-bottom: 25px;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #306B1E;
+    border-top: 6px solid #333;
+    color: #fff;
+}

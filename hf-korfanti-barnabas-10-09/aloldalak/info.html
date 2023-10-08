@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <title>Budapesti Útikalauz</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div id="headerH">
+            <h1>Budapesti Útikalauz</h1>
+            <h3>Mindenkori és aktuális látványosságok Budapesten!</h3>
+        </div>
+        <img src="../image/logo-fejlec.png" alt="Budapesti Útikalauz logója, egy térképen egy gombostű" width="auto"
+            height="120px">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Főoldal</a></li>
+            <li><a href="aktualis.html">Aktuális</a></li>
+            <li><a href="#">INFO</a></li>
+            <li id="datetime"></li>
+            <script>
+                function updateDateTime() {
+                    var datetimeElement = document.getElementById("datetime");
+                    var currentDate = new Date();
+                    var dateTimeString = currentDate.toLocaleString();
+
+                    datetimeElement.textContent = dateTimeString;
+                }
+
+                setInterval(updateDateTime, 1000);
+
+                updateDateTime();
+            </script>
+        </ul>
+    </nav>
+    <main>
+        <div class="infoLeiras">
+        <p>Üdvözöljük a Budapesti Útikalauz weboldalon, ahol minden, amire szükséged van a Budapesti kirándulásodhoz,
+            egy helyen megtalálod! Oldalunk kizárólag a város legfrissebb programjait és általános látnivalóit kínálja,
+            hogy a látogatók könnyen és gyorsan tervezhessék meg budapesti tartózkodásukat.</p>
+
+        <p>Budapesti Látnivalók:
+            Budapest gazdag történelemmel, kultúrával és gyönyörű épületekkel büszkélkedhet. A Budapesti Útikalauz
+            oldalon részletes információkat találsz a város legnépszerűbb látnivalóiról, beleértve a Vajdahunyad várát, a
+            Fiumei úti sírkertet, és még sok más ikonikus helyet. Ismerd meg ezeket a helyszíneket, nézd meg
+            fotóikat és tervezz egy felejthetetlen városnézést.</p>
+
+        <p id="infoUtsoP">Aktuális Programok:
+            Nem szeretnéd kihagyni a friss eseményeket és programokat, amikor Budapesten tartózkodsz? Budapesti
+            Útikalauz oldalunk naprakész információkkal szolgál az aktuális eseményekről, koncertekről, kiállításokról
+            és minden másról, ami érdekes lehet. Legyen szó kulturális rendezvényekről, szórakoztató programokról vagy
+            sporteseményekről, nálunk mindig megtalálod a legfrissebb információkat.</p>
+        </div>
+        <div class="infoFormok">
+            <p>Az oldallal kapcsolatos tippekért, kérlek hagyj véleményt! Köszönjük!</p>
+            <form class="elsoForm" action="" method="post">
+                <label for="username">Teljes neved:</label>
+                <input type="text" name="userName" id="username" placeholder="Írd be a neved!" required>
+                <label for="email">E-mail cím:</label>
+                <input type="email" name="eMail" id="email" placeholder="Írd be az e-mail címed!" required>
+                <div id="placeholder"></div>
+                <label for="message">Hozzáfűznivaló:</label>
+                <textarea name="szovegDoboz" id="message" cols="46" rows="10" placeholder="Írd meg a véleményed!" required></textarea>
+                <input type="submit">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Budapesti Útikalauz --- Korfanti Barnabás</p>
+    </footer>
+</body>
+</html>
