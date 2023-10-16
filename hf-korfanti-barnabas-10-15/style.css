@@ -1,0 +1,138 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #D7B520;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container {
+    width: 80%;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+header {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    background-color: #ED51D5;
+}
+
+#strandolos-kep {
+    width: 100%;
+    height: 50vh;
+    border-radius: 8px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+aside {
+    width: 30%;
+    padding: 40px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #E3ED51;
+}
+
+div > section {
+    flex-basis: 70%; 
+    padding: 20px;
+    margin: 20px 10px 0 10px;
+}
+
+div > section::after {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+section {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #959866;
+}
+
+#szekcio1 {
+    margin-top: 0;
+}
+
+#tartalom {
+    margin: 10px;
+    border-radius: 8px;
+    width: 70%;
+    padding: 20px;
+    padding-top: 0;
+    color: #fff;
+}
+
+.float-image {
+    float: left;
+    margin-right: 10px;
+    border-radius: 10%;
+    width: 22%;
+    height: auto;
+}
+
+footer {
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin: 10px;
+    text-align: center;
+    background-color: #A551ED;
+}
+
+/* Űrlap beállításai */
+
+form {
+    margin-top: 20px;
+    flex: 1;
+}
+
+label { 
+    font-style: italic;
+    font-size: 1.2em;
+    display: block;
+    margin-top: 10px;
+} 
+
+label[for="message"] {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    display: flex;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #D7B520;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #c0a015;
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Oldal elrendezése</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="img/strandolas.png" alt="Strandolós kép" id="strandolos-kep">
+        </header>
+        <div class="main-content">
+            <aside>
+                <nav>
+                    <a style="display: block; text-decoration: none; color: black; font-style: italic;" href="#szekcio1">Balaton</a></li>
+                    <a style="display: block; text-decoration: none; color: black; font-style: italic;" href="#szekcio2">Tisza-tó</a></li>
+                    <a style="display: block; text-decoration: none; color: black; font-style: italic;" href="#szekcio3">Szelidi-tó</a></li>
+                </nav>
+                <form action="/submit" method="post">
+                    <label>Kérem töltse ki a jelentkezési űrlapot</label>
+                    <label for="name">Név</label>
+                    <input type="text" id="name" name="name" required maxlength="50" placeholder="Kiss János">
+                    <label for="email">E-mail cím</label>
+                    <input type="email" id="email" name="email" required maxlength="100" placeholder="pelda@email.hu">
+                    <label for="phone">Telefonszám</label>
+                    <input type="tel" id="phone" name="phone" maxlength="15" placeholder="+36301002003">
+                    <label for="lake">Melyik tó érdekli?</label>
+                    <select id="lake" name="lake">
+                        <option value="balaton">Balaton</option>
+                        <option value="tisza-to">Tisza-tó</option>
+                        <option value="szelidi-to">Szelidi-tó</option>
+                    </select>
+                    <label>Milyen szállást keres?</label>
+                    <input type="checkbox" id="hotel" name="accommodation[]" value="szalloda">
+                    <label for="hotel">Szálloda</label> 
+                    <input type="checkbox" id="apartment" name="accommodation[]" value="apartmanhaz">
+                    <label for="apartment">Apartmanház</label>  
+                    <input type="checkbox" id="camping" name="accommodation[]" value="kemping">
+                    <label for="camping">Kemping</label>   
+                    <label>Milyen ellátás legyen?</label>
+                    <input type="radio" id="fullboard" name="meals" value="teljes">
+                    <label for="fullboard">Teljes panzió</label>
+                    <input type="radio" id="halfboard" name="meals" value="felpanzio">
+                    <label for="halfboard">Fél panzió</label>
+                    <input type="radio" id="breakfast" name="meals" value="reggeli">
+                    <label for="breakfast">Csak reggeli</label>
+                    <input type="radio" id="no_meals" name="meals" value="nem_kerek">
+                    <label for="no_meals">Nem kérek ellátást</label>
+                    <label for="message">Egyéb üzenet</label>
+                    <textarea id="message" name="message" rows="5" maxlength="500"></textarea>
+                    <button type="submit">Mehet</button>
+                </form>
+            </aside>
+            <div id="tartalom">
+                <section id="szekcio1">
+                    <img src="img/balaton.jpg" alt="Balaton kép" class="float-image">
+                    <p>A Balaton Közép-Európa és egyben Magyarország legnagyobb tava, Budapest után Magyarország
+                        legjelentősebb turisztikai központja. Fő turisztikai vonzereje a vízpart, amely fürdőzési,
+                        szörfözési és vitorlázási lehetőségek sokaságát kínálja, de a lovaglás, a sárkányrepülés és ma
+                        már a kerékpározás egyik fő központja is.
+                        <br>
+                        A Balaton északi partjának nevezetességét népművészeti és természeti értékei jelentik. Itt
+                        egyaránt találhatóak műemlékekben gazdag történelmi települések (pl. Tihany, Keszthely),
+                        különleges természeti értékek (tapolcai tavasbarlang, badacsontomaji arborétum), romantikus
+                        kastélyok és várromok (Nagyvázsony, Szigliget).
+                        <br>
+                        Az északi part egyik meghatározó települése az elsősorban az apátsági templomáról ismert Tihany,
+                        amely a Balaton legkeskenyebb részén helyezkedik el (Tihanyi-félsziget). A bencés apátságban
+                        őrzik I. András Árpád-házi uralkodó sírjáti. illetve itt tekinthető meg első latin betűvel írott
+                        nyelvemlékünk másolata, a Tihanyi Apátság alapítólevele.
+                        <br>
+                        A Balatontól szintén északra fekvő település Nagyvázsony, mely kiemelkedő látnivalója a Kinizsi
+                        Vár. Névadója Kinizsi Pál, Mátyás király és a Fekete sereg vezére.
+                        <br>
+                        Sok turistát vonz ide a már nemcsak országos, hanem nemzeközi hírű művészeti fesztivál, a
+                        Művészetek Völgye, amely július végén, augusztus elején kerül megrendezésre minden évben, és egy
+                        héten át zajlik.
+                        A déli part is számos látnivalót tartogat az ideutazó számára. Nem szabad kihagyni Somogyvár
+                        települést, melynek fő látnivalója a bencés monostor.
+                        <br>
+                        Míg a tó északi partján gyorsabban mélyülő partokkal találkoznak a fürdőzők, addig a déli parton
+                        a víz sekélyebb, lassabban mélyül. Számos kedvelt és nemzetközileg ismert strandja van, közülük
+                        több megkapta a Kék Hullám Zászló elismerést.
+                        <br>
+                        De nemcsak a fürdőzés szerelmesei találják meg a számukra megfelelő élményeket, a tó körül
+                        számos egyéb lehetőség is van. Élményfürdők, sétahajózás, kalandparkok (többek között Zánkán,
+                        Zamárdiban, Balatonfüreden) és természetjárás - ez csak néhány azok közül a szórakozási
+                        lehetőségek közül, melyek a Balatonnál várják a turistákat. Végeláthatatlan program, szabadtéri
+                        rendezvény, és koncert megrendezésre kerül a tónál, melyek főként a fiatalokat vonzzák.
+                        Kihagyhatatlan program a hajózás, amelyre remek lehetőséget kínálnak a menetrendszerint
+                        közlekedő hajók, esténként pedig a diszkóhajók is. A leginkább népszerű kikötőnek Badacsony és
+                        Tihany számítanak.
+                        Az állatkertek szerelmeseinek a balatonedericsi Afrika Múzeum, vagy a kápolnapusztai
+                        Bivalyrezervátum nyújt igazi természetközeli élményeket.
+                        <br>
+                        A pezsgő éjszakai életet kedvelők számára legfelkapottabbnak Siófok és Balatonfüred bizonyul, de
+                        a tó körül számos településen megtalálhatók azok a helyek, ahol igazán jól érezhetjük magunkat,
+                        miközben megcsodálhatjuk a túlpart éjszakai fényeit.
+                        <br>
+                        Balaton környékére jellemző a gyógyturizmus is, számos gyógyfürdő található a régióban, pl. a
+                        Hévizi-tó
+                    </p>
+                </section>
+                <section id="szekcio2">
+                    <img src="img/tiszato.jpeg" alt="Tisza-tó kép" class="float-image">
+                    <p>A Tisza-tó Magyarország második legnagyobb tava, amely az Alföld északi részén terül el. 127
+                        km2-én számtalan sziget, holtág, és sekély kis csatorna váltja egymást a hatalmas, nyílt
+                        vízterületekkel, jellegzetes, úgynevezett mozaikos tájat formálva. A Tisza-tó a Hortobágyi
+                        Nemzeti Park negyedik bemutató területe, s így 1999 óta az UNESCO Világörökség része.
+                        <br>
+                        Az Európai Bizottság 2010-ben ezt a térséget „Kiváló Európai Desztinációnak" nyilvánította, és
+                        „Magyarország legígéretesebb természetes vizű desztinációja" címet adományozta a Tisza-tónak.
+                        <br>
+                        A Tisza-tónál a kikapcsolódás is legalább annyira változatos, mint maga a táj. A
+                        természetjáráson kívül a nyugodt strandolástól a vízisportok kipróbálásáig számtalan lehetőség
+                        kínálkozik:
+                        <br>
+                        A part mentén hat szabad vízi strandon, valamint Tiszafüreden termálfürdőkben pihenhetünk, míg
+                        Abádszalók térségében extrém vízi sportolás, pezsgő éjszakai élet és szórakozóhelyek várják a
+                        látogatókat.
+                        A különböző mélységű vizeket őshonos halfajták lakják, a horgászat pedig a szabályok betartása
+                        mellett engedélyezett. A Tisza-tavi horgászrendet itt tekintheti meg
+                        A tó páratlan vadvízi világot rejt, kalandos utazásra csábítva a természetjárókat, minden
+                        évszakban más és más szabadidős lehetőséget kínálva. Egész évben válogathatunk az útvonalak
+                        között, és bejárhatjuk a vidéket gyalog, kerékpárral, lóháton, vagy csónakba szállva.
+                        A Tisza-tó területe három fő részre osztható fel:
+                        <br>
+                        <b>TISZA-TAVI MADÁRREZERVÁ</b><br>
+                        A madarak európai vonulásának fontos pihenőhelye. Védett terület, amely vezető kíséretében
+                        látogatható.
+                        <br>
+                        <b>ARANYOSI-KANYAR, SARUDI-MEDENCE, KIS-TISZA</b><br>
+                        A Tisza-tavi Túraközpont Hálózat segítségével megszervezhető a kirándulás, valamint csónakok és
+                        kerékpárok bérelhetők. Út közben barátságos kikötők, vendégházak és panziók várják az érkezőket.
+                        <br>
+                        A tó kisebb szigetein csónakkal megközelíthető madár-megfigyelőhelyeket alakítottak ki, a
+                        fészkelőhelyek közelében, így a vízitúrák alatt alkalom nyílik a madárvilág tanulmányozására.
+                        <br>
+                        <b>SARUDI-MEDENCE, ABÁDSZALÓKI-ÖBÖL, TISZAFÜREDI-MEDENCE</b><br>
+                        Nem védett terület, a vízi sportok birodalma. Egész Európában ez az egyetlen természetes tavon
+                        kijelölt terület, ahol motoros vízi sportok űzhetők.
+                    </p>
+                </section>
+                <section id="szekcio3">
+                    <img src="img/szelidito.jpg" alt="Szelidi-tó kép" class="float-image">
+                    <p>Területe: 360 ha
+                        <br>
+                        Védetté nyilvánító határozata: 2/1976. OTvH
+                        <br>
+                        Életföldrajzi tájegység: Alsó-Dunamente
+                        <br>
+                        A Kalocsai-síkságon, Dunapataj–Kalocsa–Miske-Hajós között egészen szabályos, félkör alakú, a
+                        holocén korban lefűződött, feltöltődött morotvákat találunk. Közülük állandóan csak egy
+                        morotvában van víz, a Szelidi-tóban. A tó 5 km hosszú, 150-200 m széles, 3-4 m mély, vízfelülete
+                        kb. 80 ha. Déli partján nyugalomba jutott, lapos, erdősített futóhomokbucka, az úgynevezett
+                        „Várdomb” tepeszkedik, ami jelentős régészeti lelőhely is. Háromezer éves urnák, népvándorlás és
+                        honfoglalás kori leletek kerültek innen a Magyar Nemzeti Múzeumba.
+                        <br>
+                        A tó vize nátrium-karbonátokon és magnézium sókon kívül nátrium-kloridot és nátrium-jodidot is
+                        tartalmaz. Összes sótartalma kb. 4 0%. Ez az egyetlen ilyen vízösszetételű szikes tó hazánkban.
+                        A tó mikroszkopikus élővilága igen gazdag, a kékalgák 29 faja között 4 olyan fajt is találtak,
+                        amelyek másutt nem ismertek.
+                        <br>
+                        A Szelidi-tó ma tó hármas rendeltetésű, ezek az üdülés, a horgászat és a természetvédelem. A
+                        természetvédelem célja a tó különleges algavilágának, a parti zóna és a környező területek
+                        vegetációjának fenntartása. A tavat északról határoló legelőkön, a szikes puszták endemikus
+                        növényfajait, a sziki mézpázsitot, a sziki őszirózsát, a vakszikeken a magyar sóballát találjuk.
+                        Amióta a tó feltöltésére szánt vizet a szomszédos gyepeken „pihentetik”, gazdagodott a tó és
+                        környékének madárvilága. Már nem csak a vékony nádszegélyben költő nádi énekesek énekében
+                        gyönyörködhetünk, hanem megcsodálhatjuk az átvonuló partimadarak és récék tömegeit is.
+                    </p>
+                </section>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2023 Tavak Ismertetői --- Korfanti Barnabás</p>
+        </footer>
+    </div>
+</body>
+
+</html>
