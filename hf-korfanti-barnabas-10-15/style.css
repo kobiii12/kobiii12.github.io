@@ -24,7 +24,7 @@ header {
     border-radius: 8px;
     border: 1px solid #ddd;
     margin: 10px;
-    background-color: #ED51D5;
+    background-color: #e7e6e6;
 }
 
 #strandolos-kep {
@@ -45,7 +45,7 @@ aside {
     border: 1px solid #ddd;
     margin: 10px;
     border-radius: 8px;
-    background-color: #E3ED51;
+    background-color: #5b9bd5;
 }
 
 div > section {
@@ -68,6 +68,15 @@ section {
 
 #szekcio1 {
     margin-top: 0;
+    background-color: #fbe5d6;
+}
+
+#szekcio2 {
+    background-color: #fff2cc;
+}
+
+#szekcio3 {
+    background-color: #deebf7;
 }
 
 #tartalom {
@@ -76,7 +85,7 @@ section {
     width: 70%;
     padding: 20px;
     padding-top: 0;
-    color: #fff;
+    color: #000000;
 }
 
 .float-image {
@@ -93,7 +102,7 @@ footer {
     border: 1px solid #ddd;
     margin: 10px;
     text-align: center;
-    background-color: #A551ED;
+    background-color: #e7e6e6;
 }
 
 /* Űrlap beállításai */
