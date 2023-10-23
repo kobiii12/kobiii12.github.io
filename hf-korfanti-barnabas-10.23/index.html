@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid alapú elrendezés</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,400&family=Montserrat&family=Roboto&family=Young+Serif&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/fc6ef51d5e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="banner-kep/logo.png" alt="">
+    </header>
+    <div class="grid">
+        <div class="banner"><img class="animate__tada" src="banner-kep/banner.jpg" alt="100% AKCIÓÓÓ!!"></div>
+        <div class="nav-header">
+            <h5>Promóció időtartama:</h5>
+            <h3 id="countdown"></h3>
+            <h4>Ne maradj le!</h4>
+            <script>
+                function updateCountdown() {
+                    const countdownElement = document.getElementById('countdown');
+                    const targetDate = new Date('2023-10-24T20:00:00');
+                    const currentDate = new Date();
+                    const difference = targetDate - currentDate;
+
+                    if (difference <= 0) {
+                        countdownElement.innerHTML = 'Lejárt!';
+                    } else {
+                        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                        countdownElement.innerHTML = days + ' nap ' + hours + ' óra ' + minutes + ' perc ' + seconds + ' másodperc';
+                    }
+                }
+                setInterval(updateCountdown, 1000);
+            </script>
+        </div>
+    </div>
+    <div class="container">
+        <aside>
+            <div class="aside-main">
+                <div class="form">
+                    <div class="title">Köszöntünk az oldalon!</div>
+                    <div class="side-menu">
+                        <ul>
+                            <li><a class="side-menu-a" href="#elektronika"><i class="fa-solid fa-laptop"
+                                        style="color: #ffffff;"></i> Elektronika</a></li>
+                            <li><a href="#jatekok" class="side-menu-a"><i class="fa-solid fa-bicycle"
+                                        style="color: #ffffff;"></i> Játékok</a></li>
+                            <li><a href="#kisallat" class="side-menu-a"><i class="fa-solid fa-paw"
+                                        style="color: #ffffff;"></i>
+                                    Kislállat</a></li>
+                        </ul>
+                    </div>
+                    <div class="subtitle">Iratkozz fel hírlevelünkre!</div>
+                    <div class="input-container ic2">
+                        <input id="lastname" class="input" type="text" placeholder=" " />
+                        <div class="cut"></div>
+                        <label for="lastname" class="placeholder">Vezetéknév</label>
+                    </div>
+                    <div class="input-container ic1">
+                        <input id="firstname" class="input" type="text" placeholder=" " />
+                        <div class="cut"></div>
+                        <label for="firstname" class="placeholder">Keresztnév</label>
+                    </div>
+                    <div class="input-container ic2">
+                        <input id="email" class="input" type="text" placeholder=" " />
+                        <div class="cut cut-short"></div>
+                        <label for="email" class="placeholder">E-mail</label>
+                    </div>
+                    <button type="text" class="submit">Feliratkozás!</button>
+                </div>
+            </div>
+        </aside>
+        <div class="product-main">
+            <h2 class="kategoria" id="elektronika">Elektronika</h2>
+            <div class="vonal"></div>
+            <div class="product">
+                <div class="pr-img"><img src="termek-kepek/termek1.webp" alt=""></div>
+                <ul>
+                    <li>Szállítási idő: 1-2 munkanap</li>
+                    <li>Termékvisszaküldés: 28 munkanap</li>
+                    <li>Garancia: 12 hónap</li>
+                    <br>
+                    <p>Könnyű kialakítás a maximális kényelemért. Némító funkcióval.</p>
+                </ul>
+                <div class="pr-name">PICOZON GAMING HEADSET MIKROFONNAL</div>
+                <div class="pr-price">3 790 Ft</div>
+                <a class="pr-cart" href="aloldalak/vasarlas.html"><i class='fas fa-shopping-basket'
+                        style='font-size:38px'></i></a>
+            </div>
+            <div class="product">
+                <div class="pr-img"><img src="termek-kepek/termek2.webp" alt=""></div>
+                <ul>
+                    <li>Szállítási idő: 1-2 munkanap</li>
+                    <li>Termékvisszaküldés: 28 munkanap</li>
+                    <li>Garancia: 12 hónap</li>
+                    <br>
+                    <p>Ez az USB állványos asztali mikrofon kiváló választás Pc-hez és stúdió felhasználásra. Kivételes
+                        hangminőséget biztosít és könnyen csatlakoztatható Usb-porton keresztül.</p>
+                </ul>
+                <div class="pr-name">WINTI ASZTALI ÁLLVÁNYOS MIKROFON</div>
+                <div class="pr-price">17 900 Ft</div>
+                <a class="pr-cart" href="aloldalak/vasarlas.html"><i class='fas fa-shopping-basket'
+                        style='font-size:38px'></i></a>
+            </div>
+            <h2 class="kategoria" id="jatekok">Játékok</h2>
+            <div class="vonal"></div>
+            <div class="product">
+                <div class="pr-img"><img src="termek-kepek/termek3.webp" alt=""></div>
+                <ul>
+                    <li>Szállítási idő: 1-2 munkanap</li>
+                    <li>Termékvisszaküldés: 28 munkanap</li>
+                    <li>Garancia: 12 hónap</li>
+                    <br>
+                    <p>2.4G-s krokodilfejet formázó, nagy sebességű játékcsónak.</p>
+                </ul>
+                <div class="pr-name">EACHINE KROKODILFEJES, TÁVIRÁNYÍTÓS CSÓNAK</div>
+                <div class="pr-price">13 800 Ft</div>
+                <a class="pr-cart" href="aloldalak/vasarlas.html"><i class='fas fa-shopping-basket'
+                        style='font-size:38px'></i></a>
+            </div>
+            <div class="product">
+                <div class="pr-img"><img src="termek-kepek/termek4.webp" alt=""></div>
+                <ul>
+                    <li>Szállítási idő: 1-2 munkanap</li>
+                    <li>Termékvisszaküldés: 28 munkanap</li>
+                    <li>Garancia: 12 hónap</li>
+                    <br>
+                    <p>HappyBaby Gyermek Futókerékpár, készség és képességfejlesztő, gyerekeknek 2 - 5 éves kor között</p>
+                </ul>
+                <div class="pr-name">HAPPYBABY GYERMEK FUTÓKERÉKPÁR</div>
+                <div class="pr-price">7 490 Ft</div>
+                <a class="pr-cart" href="aloldalak/vasarlas.html"><i class='fas fa-shopping-basket'
+                        style='font-size:38px'></i></a>
+            </div>
+            <h2 class="kategoria" id="kisallat">Kisállat</h2>
+            <div class="vonal"></div>
+            <div class="product">
+                <div class="pr-img"><img src="termek-kepek/termek5.webp" alt=""></div>
+                <ul>
+                    <li>Szállítási idő: 1-2 munkanap</li>
+                    <li>Termékvisszaküldés: 28 munkanap</li>
+                    <li>Garancia: 12 hónap</li>
+                    <br>
+                    <p>Vízálló, állítható hőmérsékletű melegítőpárna, hogy kis kedvenced sose fázzon.</p>
+                </ul>
+                <div class="pr-name">NAMSAN ELEKTROMOS MELEGÍTŐPÁRNA KISÁLLATOKNAK 60X45 CM</div>
+                <div class="pr-price">11 990 Ft</div>
+                <a class="pr-cart" href="aloldalak/vasarlas.html"><i class='fas fa-shopping-basket'
+                        style='font-size:38px'></i></a>
+            </div>
+            <div class="product">
+                <div class="pr-img"><img src="termek-kepek/termek6.webp" alt=""></div>
+                <ul>
+                    <li>Szállítási idő: 1-2 munkanap</li>
+                    <li>Termékvisszaküldés: 28 munkanap</li>
+                    <li>Garancia: 12 hónap</li>
+                    <br>
+                    <p>A Horing Hálós Kutya- és macskakennel, tágas és tartós megoldást kínál háziállatok számára, kiválóan alkalmas kiskutyák számára is.</p>
+                </ul>
+                <div class="pr-name">HORING HÁLÓS KUTYAKENNEL 77X77X57CM (BARNA)</div>
+                <div class="pr-price">8 900 Ft</div>
+                <a class="pr-cart" href="aloldalak/vasarlas.html"><i class='fas fa-shopping-basket'
+                        style='font-size:38px'></i></a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Minden jog fenntartva. - HARDWARES.hu</p>
+    </footer>
+</body>
+
+</html>

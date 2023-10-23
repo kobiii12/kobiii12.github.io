@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid alapú elrendezés</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,400&family=Montserrat&family=Roboto&family=Young+Serif&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/fc6ef51d5e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="../banner-kep/logo.png" alt="">
+    </header>
+    <div class="grid">
+        <div class="banner"><img class="animate__tada" src="../banner-kep/banner.jpg" alt="100% AKCIÓÓÓ!!"></div>
+        <div class="nav-header">
+            <h5>Promóció időtartama:</h5>
+            <h3 id="countdown"></h3>
+            <h4>Ne maradj le!</h4>
+            <script>
+                function updateCountdown() {
+                    const countdownElement = document.getElementById('countdown');
+                    const targetDate = new Date('2023-10-24T20:00:00');
+                    const currentDate = new Date();
+                    const difference = targetDate - currentDate;
+
+                    if (difference <= 0) {
+                        countdownElement.innerHTML = 'Lejárt!';
+                    } else {
+                        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                        countdownElement.innerHTML = days + ' nap ' + hours + ' óra ' + minutes + ' perc ' + seconds + ' másodperc';
+                    }
+                }
+                setInterval(updateCountdown, 1000);
+            </script>
+        </div>
+    </div>
+    <div class="container">
+        
+        <div class="termek-container">
+            <h1 style="color: red;">Figyelem!</h1>
+            <p>Ez egy teszt oldal, semmilyen tranzakciót nem lehet rajta végrehajtani, csak és kizárólag a saját magam
+                szórakoztatására, illetve a gridek gyakorlására jött létre, ja és igen, a promóció is csak átverés! :)
+            </p>
+            <a href="../index.html" style="color: red;">Elég ebből! Vissza a főoldalra!</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Minden jog fenntartva. - HARDWARES.hu</p>
+    </footer>
+</body>
+
+</html>
