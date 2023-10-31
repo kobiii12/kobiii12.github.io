@@ -31,4 +31,5 @@ div a {
 }
 div a:hover {
     border: 4px solid rgb(255, 109, 109);
+    padding: 6px;
 }
