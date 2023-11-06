@@ -2,56 +2,75 @@
 <html lang="hu">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Github</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Github</title>
 </head>
 
 <body>
-    <h1>Korfanti Barnabás</h1>
-    <div class="container">
-        <a id="myBtn" href="#">
-            <h2>Vizsgamunka</h2>
-        </a>
-        <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <img src="seeyou.gif" alt="See you soon!"></div>
-        </div>
-        <script>// Get the modal
-            var modal = document.getElementById("myModal");
-            
-            // Get the button that opens the modal
-            var btn = document.getElementById("myBtn");
-            
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-            
-            // When the user clicks on the button, open the modal
-            btn.onclick = function() {
-              modal.style.display = "block";
-            }
-            
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-              modal.style.display = "none";
-            }
-            
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-              if (event.target == modal) {
-                modal.style.display = "none";
-              }
-            }</script>
+  <h1>Korfanti Barnabás</h1>
+  <div class="container">
+    <a id="myBtn" href="#">
+      <h2>Vizsgamunka</h2>
+    </a>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="seeyou.gif" alt="See you soon!">
+      </div>
+    </div>
+    <script>// Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }</script>
     <a href="https://kobiii12.github.io/hazifeladat-korfanti-barnabas-10-01/index.html">Házi feladat -- 10.01
-        (Pilis)</a>
+      (Pilis)</a>
     <a href="https://kobiii12.github.io/hf-korfanti-barnabas-10-09/index.html">Házi feladat -- 10.09 (Szabadon
-        választott oldal)</a>
+      választott oldal)</a>
     <a href="https://kobiii12.github.io/hf-korfanti-barnabas-10-15/index.html">Házi feladat -- 10.15 (Tavak)</a>
     <a href="https://kobiii12.github.io/hf-korfanti-barnabas-10.23/index.html">Házi feladat -- 10.23 (Szabadon
-        választott oldal 2)</a>
-    </div>
+      választott oldal 2)</a>
+    <a href="https://kobiii12.github.io/JS-hf-Korfanti-Barnabas-11.06/index.html"
+      onclick="return confirmNavigation()">JS Első HF -- 11.06 (Webfejlesztés gyakorlása)</a>
+
+    <script>
+      function confirmNavigation() {
+        if (!confirm("Biztosan készen állsz továbblépni?")) {
+          return false;
+        }
+        if (!confirm("Egész biztosan?")) {
+          return false;
+        }
+        if (!confirm("200%-ig biztos vagy benne?")) {
+          return false;
+        }
+        alert("Jó, legyen ahogy szeretnéd...");
+        return true;
+      }
+    </script>
+  </div>
 
 </body>
 

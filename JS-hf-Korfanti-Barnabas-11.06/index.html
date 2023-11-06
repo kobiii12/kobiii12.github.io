@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webfejlesztés gyakorlása</title>
+</head>
+
+<body>
+
+    <script>
+
+        let myName = 'Barnabás';
+        let friendName = 'Bence';
+
+        console.log(myName);
+        console.log(friendName);
+
+        const PI = 3.14159;
+        console.log(PI);
+
+        // PI = 3.14;
+
+        let stringExample = 'Ez egy karakterlánc';
+        let numberExample = 10;
+        let booleanExample = true;
+
+        // Objektumok
+        let person = {
+            name: 'Mátyás',
+            age: 20,
+            city: 'Miskolc'
+        };
+
+        // Értékek definiálása
+        let initializedVar = 'Inicializált Változó';
+        let uninitializedVar;
+
+        console.log(initializedVar);
+        console.log(uninitializedVar);
+
+        // Alap műveletek
+        let num1 = 10;
+        let num2 = 5;
+
+        let sum = num1 + num2;
+        let difference = num1 - num2;
+        let product = num1 * num2;
+        let quotient = num1 / num2;
+        let remainder = num1 % num2;
+
+        console.log(sum);
+        console.log(difference);
+        console.log(product);
+        console.log(quotient);
+        console.log(remainder);
+
+        // Műveleti sorrend
+        let complexOperation = (num1 + num2) * num2 - num1 / (num2 + num1);
+        console.log(complexOperation);
+
+        // Böngésző interakció
+        alert('Üdvözlünk a weboldalon!');
+
+        let userName = prompt('Mi a neved?');
+        alert(`Üdvözöllek, ${userName}!`);
+        console.log(`Üdvözlet a konzolban, ${userName}!`);
+
+        // Elágazások
+        let userAge = prompt('Hány éves vagy?');
+        if (userAge >= 18) {
+            alert('Hozzáférhetsz a tartalmakhoz.');
+        } else {
+            alert('Nem férhetsz hozzá a tartalmakhoz.');
+        }
+
+        // Összeadás művelet
+        let addNum1 = 6;
+        let addNum2 = 42;
+        let additionResult = addNum1 + addNum2;
+        console.log(`Az összeadás eredménye: ${additionResult}`);
+    </script>
+
+    <img style="display: block; margin: 100px auto;" src="other/pic.gif">
+
+</body>
+
+</html>
