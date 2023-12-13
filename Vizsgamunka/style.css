@@ -13,17 +13,23 @@
     border-radius: 5px;
     padding-bottom: 20px;
     max-height: 520px;
+    display: grid;
 }
 
 img#leftbanner {
-    width: 80%;
+    width: 100%;
     height: auto;
     grid-column: span 4;
-    grid-row: span 1;
+    margin: 60px auto 60px auto;
 }
 
 h1 {
     text-align: center;
+}
+
+.nav-item {
+    text-align: end;
+    padding: 10px;
 }
 
 .secondnav {
@@ -31,6 +37,10 @@ h1 {
     margin-top: 20px;
     font-weight: 600;
     color: #ffffff;
+}
+
+.snavcat {
+    margin-bottom: 20px;
 }
 
 .rightcontainer {
@@ -57,7 +67,7 @@ h1 {
 /* Footer */
 footer {
     width: 100%;
-    background-color: #263238;
+    background-color: rgb(38, 50, 56);
     min-height: 250px;
     padding: 10px 15% 25px 15%;
     margin-top: 50px;
@@ -112,10 +122,18 @@ footer p {
     margin-top: 15px;
 }
 
+@media (min-width: 1645px) {
+    img#leftbanner {
+        width: 80%;
+        justify-self: center;
+    }
+}
+
 @media (max-width: 1215px) {
     .leftcontainer {
         grid-column: span 5;
     }
+
     .rightcontainer {
         grid-column: span 7;
     }
@@ -125,21 +143,26 @@ footer p {
     .leftcontainer {
         display: none;
     }
+
     .rightcontainer {
         grid-column: span 12;
         margin-left: 40px;
     }
+
     nav {
         padding: 0 1rem;
     }
+
     .container {
         max-height: 120px;
     }
+
     .twoimage {
         flex-direction: column;
         align-content: center;
     }
-    .twoimage > img {
+
+    .twoimage>img {
         width: 70%;
         margin-bottom: 20px;
     }
