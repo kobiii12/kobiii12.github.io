@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
             integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -48,44 +48,40 @@
         </nav>
     </header>
 
+    <div id="jumptotop"><a href="#top"><img src="images/totop.png" alt=""></a></div>
+
     <div class="maincontainer">
         <div class="leftcontainer">
             <ul class="secondnav" type="none">
-                <li class="snavcat">Kutyás foglalkozások
+                <h2>Találd meg a választ!</h2>
+                <li class="snavcat">Egyéni- és kiscsoportos foglalkozások
                     <ul>
-                        <li>Előszó</li>
-                        <li>Kinek ajánljuk?</li>
-                        <li>Videók</li>
+                        <li>Állatasszisztált terápia</li>
+                        <li>Autizmus specifikus fejlesztés</li>
+                        <li>Komplex gyógypedagógiai fejlesztés</li>
+                        <li>Iskola-előkészítő</li>
                     </ul>
                 </li>
-                <li class="snavcat"> Kiscsoportos fejlesztés
+                <li class="snavcat">Konzultáció és tanácsadás
                     <ul>
-                        <li>Autizmus specifikus</li>
-                        <li>Szociális, kommunikációs fejlesztés</li>
-                        <li>Gyermekkortól, kamaszkorig</li>
+                        <li>Szülőknek</li>
+                        <li>Szakembereknek</li>
                     </ul>
                 </li>
-                <li class="snavcat">Kategoria 3
+                <li class="snavcat">Előadástartás
                     <ul>
-                        <li>Tartalom 1</li>
-                        <li>Tartalom 2</li>
-                        <li>Tartalom 3</li>
-                    </ul>
-                </li>
-                <li class="snavcat">Kategoria 4
-                    <ul>
-                        <li>Tartalom 1</li>
-                        <li>Tartalom 2</li>
-                        <li>Tartalom 3</li>
+                        <li>Kiknek?</li>
+                        <li>Mikor?</li>
+                        <li>Hol?</li>
                     </ul>
                 </li>
             </ul>
-            <img id="leftbanner" src="images/banner.jpg" alt="">
+            <img id="leftbanner" src="images/banner.png" alt="">
         </div>
 
         <div class="rightcontainer">
             <div class="topic">
-                <h1>Első topic</h1>
+                <h1>Előszó</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, aliquid dolore dignissimos
                     obcaecati asperiores, distinctio quas voluptates ipsa, debitis saepe quia quam suscipit autem
                     incidunt. Tempora velit iure pariatur magnam.
@@ -97,7 +93,7 @@
                     Exercitationem voluptates odio vel vero?</p>
             </div>
             <div class="topic">
-                <h1>Masodik topic</h1>
+                <h1>A szakember segít</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, aliquid dolore dignissimos
                     obcaecati asperiores, distinctio quas voluptates ipsa, debitis saepe quia quam suscipit autem
                     incidunt. Tempora velit iure pariatur magnam.
@@ -109,7 +105,7 @@
                     Exercitationem voluptates odio vel vero?</p>
             </div>
             <div class="topic">
-                <h1>Harmadik topic</h1>
+                <h1>Előadás- és foglalkozástartás</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, aliquid dolore dignissimos
                     obcaecati asperiores, distinctio quas voluptates ipsa, debitis saepe quia quam suscipit autem
                     incidunt. Tempora velit iure pariatur magnam.
@@ -120,11 +116,11 @@
                     corrupti magnam, aliquid vel fugit debitis impedit doloribus ullam? Voluptas earum vero tenetur?
                     Exercitationem voluptates odio vel vero?</p>
             </div>
-            <div class="twoimage"><img width="40%" height="auto" src="images/banana.png" alt="">
-                <img width="40%" height="auto" src="images/stich.jpg" alt="">
+            <div class="twoimage"><img width="40%" height="auto" src="images/zeo.png" alt="">
+                <img width="40%" height="auto" src="images/kucmorgo.png" alt="">
             </div>
         </div>
-        
+
     </div>
     <footer class="footer">
         <div class="containerbottom bottom_border">
@@ -154,17 +150,36 @@
                     <p><i class="fa fa-phone"></i> +36-30-190-0677 </p>
                     <p><i class="fa fa fa-envelope"></i> info@beloadas.hu </p>
                 </div>
-
             </div>
-
         </div>
-
-
         <div class="footercontainer">
             <p class="text-center">Copyright 2023 | Készítette: Korfanti Barnabás</p>
         </div>
-
     </footer>
+    <script>
+        window.addEventListener('scroll', function () {
+            var header = document.getElementById('header');
+            var jumptotop = document.getElementById('jumptotop');
+            var headerBottom = header.offsetTop + header.offsetHeight;
+
+            // A fejléc alatt vagyunk, és a jumptotop még nem látható.
+            if (window.pageYOffset > headerBottom && jumptotop.style.visibility !== 'visible') {
+                jumptotop.style.opacity = '1';
+                jumptotop.style.visibility = 'visible';
+            }
+            // Visszagörgettünk a fejlécig.
+            else if (window.pageYOffset <= headerBottom && jumptotop.style.visibility === 'visible') {
+                jumptotop.style.opacity = '0';
+                // Beállítjuk a visibility-t hidden-re, de csak miután az opacity átmenet befejeződött.
+                setTimeout(function () {
+                    // Csak akkor állítjuk hidden-re, ha már nem vagyunk a fejléc alatt.
+                    if (window.pageYOffset <= headerBottom) {
+                        jumptotop.style.visibility = 'hidden';
+                    }
+                }, 1000); // Az opacity átmenet időtartama után.
+            }
+        });
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -174,7 +189,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>

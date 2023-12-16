@@ -1,30 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+#jumptotop {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 0s 1s;
+    z-index: 9999;
+    position: fixed;
+    left: 90%;
+    top: 80%;
+}
+
+
+#jumptotop > a > img {
+    max-width: 100px;
+}
+
 .maincontainer {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     grid-gap: 20px;
     margin-top: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.galeriacontainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 oszlop */
+    grid-gap: 10px;
+    /* Kis térköz a képek között */
+    margin: 50px;
+}
+
+.galeria-kep {
+    width: 100%;
+    cursor: pointer;
+    /* Kattintható kurzor */
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nagyitottKep {
+    max-width: 90%;
+    max-height: 90%;
 }
 
 .leftcontainer {
     grid-column: span 4;
-    background-color: #5d98ff;
+    background-color: #a1e7ff;
     margin-left: 40px;
     border-radius: 5px;
     padding-bottom: 20px;
-    max-height: 520px;
     display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 img#leftbanner {
+    position: relative;
     width: 100%;
     height: auto;
-    grid-column: span 4;
-    margin: 60px auto 60px auto;
+    grid-column: span 12;
+    border-radius: 0 10px 0 0;
 }
 
 h1 {
     text-align: center;
+}
+
+#galeriah1 {
+    margin-top: 50px;
 }
 
 .nav-item {
@@ -33,19 +88,20 @@ h1 {
 }
 
 .secondnav {
-    grid-column: span 3/4;
+    grid-column: span 12;
     margin-top: 20px;
     font-weight: 600;
-    color: #ffffff;
+    color: #333;
+    margin-bottom: 0;
 }
 
 .snavcat {
-    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 .rightcontainer {
     grid-column: span 8;
-    background-color: #5d98ff;
+    background-color: #a1e7ff;
     margin-right: 40px;
     border-radius: 5px;
     padding: 20px;
@@ -53,8 +109,12 @@ h1 {
 
 .topic {
     margin-bottom: 20px;
-    border-bottom: 2px solid grey;
-    color: #FFF;
+    border-bottom: 1px solid rgb(190, 190, 190);
+    color: #333;
+}
+
+.topic > p {
+    margin-top: 30px;
 }
 
 .twoimage {
@@ -62,6 +122,11 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.twoimage>img {
+    border-radius: 15px;
+    border: 1px solid rgb(190, 190, 190);
 }
 
 /* Footer */
@@ -129,6 +194,17 @@ footer p {
     }
 }
 
+@media (min-width: 2620px) {
+    img#leftbanner {
+        width: 75%;
+    }
+
+    .maincontainer,
+    nav {
+        font-size: 22px;
+    }
+}
+
 @media (max-width: 1215px) {
     .leftcontainer {
         grid-column: span 5;
@@ -137,11 +213,26 @@ footer p {
     .rightcontainer {
         grid-column: span 7;
     }
+
+    .galeriacontainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #suni {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
+    .jumptotop {
+        top: 70%;
+        left: 80%;
+    }
+
     .leftcontainer {
-        display: none;
+        order: 1;
+        grid-column: span 12;
+        margin-right: 40px;
     }
 
     .rightcontainer {

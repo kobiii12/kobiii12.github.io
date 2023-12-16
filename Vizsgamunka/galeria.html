@@ -48,83 +48,23 @@
         </nav>
     </header>
 
-    <div class="maincontainer">
-        <div class="leftcontainer">
-            <ul class="secondnav" type="none">
-                <li class="snavcat">Kutyás foglalkozások
-                    <ul>
-                        <li>Előszó</li>
-                        <li>Kinek ajánljuk?</li>
-                        <li>Videók</li>
-                    </ul>
-                </li>
-                <li class="snavcat"> Kiscsoportos fejlesztés
-                    <ul>
-                        <li>Autizmus specifikus</li>
-                        <li>Szociális, kommunikációs fejlesztés</li>
-                        <li>Gyermekkortól, kamaszkorig</li>
-                    </ul>
-                </li>
-                <li class="snavcat">Kategoria 3
-                    <ul>
-                        <li>Tartalom 1</li>
-                        <li>Tartalom 2</li>
-                        <li>Tartalom 3</li>
-                    </ul>
-                </li>
-                <li class="snavcat">Kategoria 4
-                    <ul>
-                        <li>Tartalom 1</li>
-                        <li>Tartalom 2</li>
-                        <li>Tartalom 3</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+    <h1 id="galeriah1">Foglalkozások, Kézzel készült játékok és Fejlesztőeszközök</h1>
 
-        <div class="rightcontainer">
-            <div class="topic">
-                <h1>Első topic</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, aliquid dolore dignissimos
-                    obcaecati asperiores, distinctio quas voluptates ipsa, debitis saepe quia quam suscipit autem
-                    incidunt. Tempora velit iure pariatur magnam.
-                    Similique cupiditate nam placeat ad fugit optio, eaque exercitationem totam nihil laudantium maxime
-                    quidem maiores consequuntur laboriosam sunt earum. Eius debitis mollitia eveniet magni incidunt
-                    animi quod facilis maxime dolores.
-                    Temporibus laboriosam adipisci fugit! Amet perferendis qui pariatur dolores est dolore nobis
-                    corrupti magnam, aliquid vel fugit debitis impedit doloribus ullam? Voluptas earum vero tenetur?
-                    Exercitationem voluptates odio vel vero?</p>
-            </div>
-            <div class="topic">
-                <h1>Masodik topic</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, aliquid dolore dignissimos
-                    obcaecati asperiores, distinctio quas voluptates ipsa, debitis saepe quia quam suscipit autem
-                    incidunt. Tempora velit iure pariatur magnam.
-                    Similique cupiditate nam placeat ad fugit optio, eaque exercitationem totam nihil laudantium maxime
-                    quidem maiores consequuntur laboriosam sunt earum. Eius debitis mollitia eveniet magni incidunt
-                    animi quod facilis maxime dolores.
-                    Temporibus laboriosam adipisci fugit! Amet perferendis qui pariatur dolores est dolore nobis
-                    corrupti magnam, aliquid vel fugit debitis impedit doloribus ullam? Voluptas earum vero tenetur?
-                    Exercitationem voluptates odio vel vero?</p>
-            </div>
-            <div class="topic">
-                <h1>Harmadik topic</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, aliquid dolore dignissimos
-                    obcaecati asperiores, distinctio quas voluptates ipsa, debitis saepe quia quam suscipit autem
-                    incidunt. Tempora velit iure pariatur magnam.
-                    Similique cupiditate nam placeat ad fugit optio, eaque exercitationem totam nihil laudantium maxime
-                    quidem maiores consequuntur laboriosam sunt earum. Eius debitis mollitia eveniet magni incidunt
-                    animi quod facilis maxime dolores.
-                    Temporibus laboriosam adipisci fugit! Amet perferendis qui pariatur dolores est dolore nobis
-                    corrupti magnam, aliquid vel fugit debitis impedit doloribus ullam? Voluptas earum vero tenetur?
-                    Exercitationem voluptates odio vel vero?</p>
-            </div>
-            <div class="twoimage"><img width="40%" height="auto" src="images/banana.png" alt="">
-                <img width="40%" height="auto" src="images/stich.jpg" alt="">
-            </div>
-        </div>
-        <img id="leftbanner" src="images/banner.jpg" alt="">
+    <div class="galeriacontainer">
+        <img src="images/galeriakepek/indie1.webp" alt="Kutyás foglalkozás 1" class="galeria-kep">
+        <img src="images/galeriakepek/indie2.webp" alt="Kutyás foglalkozás 2" class="galeria-kep">
+        <img src="images/galeriakepek/indie3.webp" alt="Kutyás foglalkozás 3" class="galeria-kep">
+        <img src="images/galeriakepek/jatek1.webp" alt="Kézzel készült játékok 1" class="galeria-kep">
+        <img src="images/galeriakepek/jatek2.webp" alt="Kézzel készült játékok 2" class="galeria-kep">
+        <img src="images/galeriakepek/jatek3.webp" alt="Kézzel készült játékok 3" class="galeria-kep">
+        <img id="suni" src="images/galeriakepek/fejleszt1.jpg" alt="Fejlesztőjáték példák 1" class="galeria-kep">
+        <img src="images/galeriakepek/fejleszt2.jpg" alt="Fejlesztőjáték példák 2" class="galeria-kep">
+        <img src="images/galeriakepek/fejleszt3.jpg" alt="Fejlesztőjáték példák 3" class="galeria-kep">
     </div>
+    <div id="overlay" style="display:none;">
+        <img id="nagyitottKep">
+    </div>
+
     <footer class="footer">
         <div class="containerbottom bottom_border">
             <div class="row">
@@ -164,6 +104,22 @@
         </div>
 
     </footer>
+    <script>
+        document.querySelectorAll('.galeria-kep').forEach(kep => {
+            kep.addEventListener('click', function () {
+                var overlay = document.getElementById('overlay');
+                var nagyitottKep = document.getElementById('nagyitottKep');
+
+                nagyitottKep.src = this.src; // Átmásolja a kiválasztott kép forrását
+                overlay.style.display = 'flex'; // Megjeleníti az overlay-t
+            });
+        });
+
+        document.getElementById('overlay').addEventListener('click', function () {
+            this.style.display = 'none'; // Elrejti az overlay-t, amikor rákattintanak
+        });
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
