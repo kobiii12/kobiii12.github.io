@@ -6,8 +6,8 @@
     transition: opacity 1s ease, visibility 0s 1s;
     z-index: 9999;
     position: fixed;
-    left: 90%;
-    top: 80%;
+    right: 50px;
+    bottom: 50px;
 }
 
 
@@ -72,6 +72,7 @@ img#leftbanner {
     height: auto;
     grid-column: span 12;
     border-radius: 0 10px 0 0;
+    margin-top: 10px;
 }
 
 h1 {
@@ -225,8 +226,8 @@ footer p {
 
 @media (max-width: 768px) {
     .jumptotop {
-        top: 70%;
-        left: 80%;
+        right: 10px;
+        bottom: 10px;
     }
 
     .leftcontainer {
