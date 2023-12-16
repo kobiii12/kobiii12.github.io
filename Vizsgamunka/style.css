@@ -6,8 +6,8 @@
     transition: opacity 1s ease, visibility 0s 1s;
     z-index: 9999;
     position: fixed;
-    right: 50px;
-    bottom: 50px;
+    left: 20px;
+    bottom: 20px;
 }
 
 
@@ -225,9 +225,8 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    .jumptotop {
-        right: 10px;
-        bottom: 10px;
+    #jumptotop > a > img {
+        max-width: 80px;
     }
 
     .leftcontainer {
