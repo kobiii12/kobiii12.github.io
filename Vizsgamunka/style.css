@@ -10,8 +10,7 @@
     bottom: 20px;
 }
 
-
-#jumptotop > a > img {
+#jumptotop>a>img {
     max-width: 100px;
 }
 
@@ -24,19 +23,17 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+/* GALÉRIA */
 .galeriacontainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* 3 oszlop */
     grid-gap: 10px;
-    /* Kis térköz a képek között */
     margin: 50px;
 }
 
 .galeria-kep {
     width: 100%;
     cursor: pointer;
-    /* Kattintható kurzor */
 }
 
 #overlay {
@@ -55,6 +52,111 @@
     max-width: 90%;
     max-height: 90%;
 }
+
+/* GALÉRIA-VÉGE */
+
+/* FOGLALKOZÁSOK */
+.foglalkozas>h2 {
+    grid-row: span 1;
+    grid-column: span 12;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.foglalkozas {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column: span 12;
+    padding: 0 20px;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.foglalkozas>span {
+    grid-column: span 8;
+    grid-row: span 2;
+    text-align: start;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    padding: 10px;
+    background-color: #a6e9ff;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.19); 
+    box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.19);
+}
+
+.foglalkozas>img {
+    background-color: #323f45;
+    grid-column: span 3;
+    grid-row: span 2;
+    width: 100%;
+    height: auto;
+    align-self: start;
+    border-radius: 10px;
+}
+
+/* FOGLALKOZÁSOK-VÉGE */
+
+/* RÓLUNK */
+.bgcommon {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: span 10/12;
+    background-color: #a1e7ff;
+    padding-top: 20px;
+    border-radius: 5px;
+}
+
+.rolunk {
+    grid-column: span 12;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.szakemberek {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column: span 10/12;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.szakemberek>p {
+    grid-column: span 7/11;
+    grid-row: span 1;
+    text-align: start;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    text-align: justify;
+    padding: 10px;
+    background-color: #a6e9ff;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.19); 
+    box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.19);
+}
+
+.szakemberek>img {
+    background-color: #323f45;
+    grid-column: span 3;
+    grid-row: span 1;
+    width: 100%;
+    height: auto;
+}
+
+iframe {
+    grid-column: span 9/11;
+    margin: 20px;
+    height: 20em;
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* RÓLUNK-VÉGE */
+
+/* AJÁNLATKÉRÉS */
+/* AJÁNLATKÉRÉS-VÉGE */
 
 .leftcontainer {
     grid-column: span 4;
@@ -112,10 +214,17 @@ h1 {
     margin-bottom: 20px;
     border-bottom: 1px solid rgb(190, 190, 190);
     color: #333;
+    text-align: justify;
 }
 
-.topic > p {
+.topic>p {
     margin-top: 30px;
+    padding: 10px;
+    background-color: #a6e9ff;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.19); 
+    box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.19);
+    font-weight: 600;
 }
 
 .twoimage {
@@ -225,7 +334,7 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    #jumptotop > a > img {
+    #jumptotop>a>img {
         max-width: 80px;
     }
 
@@ -256,5 +365,33 @@ footer p {
     .twoimage>img {
         width: 70%;
         margin-bottom: 20px;
+    }
+
+    .foglalkozas>h2 {
+        grid-column: span 12;
+        text-align: center;
+        margin: 0;
+        order: 0;
+        grid-row: span 1;
+    }
+
+    .foglalkozas {
+        grid-template-rows: repeat(10, 1fr);
+        justify-content: center;
+    }
+
+    .foglalkozas>span {
+        grid-column: span 12;
+        margin: 0;
+        margin-top: 10px;
+        order: 1;
+        grid-row: span 7/11;
+        align-self: start;
+    }
+
+    .foglalkozas>img {
+        order: 0;
+        grid-column: span 12;
+        grid-row: span 2;
     }
 }
