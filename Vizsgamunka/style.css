@@ -102,10 +102,11 @@
 .bgcommon {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-column: span 10/12;
+    grid-column: span 12;
     background-color: #a1e7ff;
-    padding-top: 20px;
+    margin: 0 40px;
     border-radius: 5px;
+    padding: 20px;
 }
 
 .rolunk {
@@ -144,15 +145,16 @@
     width: 100%;
     height: auto;
     border-radius: 10px;
-    ;
+    margin-bottom: 10px;
 }
 
 iframe {
-    grid-column: span 9/11;
+    grid-column: span 10/12;
     margin: 20px;
     height: 20em;
     width: 100%;
     border-radius: 15px;
+    justify-self: center;
 }
 
 /* RÓLUNK-VÉGE */
@@ -165,7 +167,7 @@ iframe {
     background-color: #a1e7ff;
     margin-left: 40px;
     border-radius: 5px;
-    padding-bottom: 20px;
+    padding: 20px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
@@ -185,6 +187,7 @@ h1 {
 
 #galeriah1 {
     margin-top: 50px;
+    padding: 0 10px;
 }
 
 .nav-item {
@@ -198,6 +201,7 @@ h1 {
     font-weight: 600;
     color: #333;
     margin-bottom: 0;
+    padding: 0 0 0 20px;
 }
 
 .snavcat {
@@ -215,18 +219,18 @@ h1 {
 
 .toggle-button {
     cursor: pointer;
-    margin:0 10px;
+    margin: 0 10px;
     color: blue;
 }
+
 .toggle-button:hover {
     cursor: pointer;
-    margin:0 10px;
+    margin: 0 10px;
     color: red;
 }
 
 .toggle-content {
-    margin:0 20px 16px 20px;
-    text-align: justify;
+    margin: 0 0 16px 0;
     padding: 10px;
     background-color: #a6e9ff;
     border-radius: 10px;
@@ -257,6 +261,10 @@ h1 {
     -webkit-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.19);
     box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.19);
     font-weight: 600;
+}
+
+.topic>h4 {
+    text-align: center;
 }
 
 .twoimage {
@@ -366,13 +374,26 @@ footer p {
         display: none;
     }
 
-    .szakemberek>p {
+    .bgcommon {
+        margin: 0 20px;
+    }
+
+    .szakemberek {
+        padding: 0;
         grid-column: span 12;
     }
 
     .szakemberek>img {
-        grid-column: span 4/5;
-        margin-left: 30px;
+        grid-column: span 12;
+        margin-left: 0;
+        max-width: 300px;
+        max-height: 450px;
+    }
+
+    .szakemberek>p {
+        margin: 0;
+        grid-column: span 12;
+        text-align: start;
     }
 }
 
@@ -384,12 +405,12 @@ footer p {
     .leftcontainer {
         order: 1;
         grid-column: span 12;
-        margin-right: 40px;
+        margin: 0 20px;
     }
 
     .rightcontainer {
         grid-column: span 12;
-        margin-left: 40px;
+        margin: 0 20px;
     }
 
     nav {
@@ -410,13 +431,24 @@ footer p {
         margin-bottom: 20px;
     }
 
-    .szakemberek>img {
-        grid-column: span 8/11;
-        margin-left: 0;
+    .galeriacontainer {
+        margin: 50px 20px;
     }
 
-    .szakemberek>p {
+    #galeriah1 {
+        font-size: 20px;
+    }
+
+    .szakemberek>img {
+        grid-column: span 12;
+        justify-self: center;
+        max-width: auto;
+        max-height: auto;
+    }
+
+    iframe {
         margin: 0;
+        grid-column: span 12;
     }
 
     .foglalkozas>h2 {
@@ -425,11 +457,13 @@ footer p {
         margin: 0;
         order: 0;
         grid-row: span 1;
+        align-self: center;
     }
 
     .foglalkozas {
-        grid-template-rows: repeat(10, 1fr);
+        grid-template-rows: repeat(7, 1fr);
         justify-content: center;
+        padding: 0;
     }
 
     .foglalkozas>span {
@@ -437,7 +471,7 @@ footer p {
         margin: 0;
         margin-top: 10px;
         order: 1;
-        grid-row: span 7/11;
+        grid-row: span 4/8;
         align-self: start;
     }
 
@@ -445,5 +479,6 @@ footer p {
         order: 0;
         grid-column: span 12;
         grid-row: span 2;
+        align-self: center;
     }
 }
