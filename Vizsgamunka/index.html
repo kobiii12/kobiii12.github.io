@@ -56,24 +56,58 @@
                 <h2>Találd meg a választ!</h2>
                 <li class="snavcat">Egyéni- és kiscsoportos foglalkozások
                     <ul>
-                        <li>Állatasszisztált terápia</li>
-                        <li>Autizmus specifikus fejlesztés</li>
-                        <li>Komplex gyógypedagógiai fejlesztés</li>
-                        <li>Iskola-előkészítő</li>
+                        <li><a href="foglalkozasok.html#allatos">Állatasszisztált terápia</a></li>
+                        <li><a href="foglalkozasok.html#auti">Autizmus specifikus fejlesztés</a></li>
+                        <li><a href="foglalkozasok.html#komplex">Komplex gyógypedagógiai fejlesztés</a></li>
+                        <li><a href="foglalkozasok.html#iskola">Iskola-előkészítő</a></li>
                     </ul>
                 </li>
                 <li class="snavcat">Konzultáció és tanácsadás
                     <ul>
-                        <li>Szülőknek</li>
-                        <li>Szakembereknek</li>
+                        <li>Szülőknek<span class="toggle-button">+</span>
+                            <p class="toggle-content" style="display: none;">A szülőkkel és pedagógusokkal való
+                                együttműködésre nagy hangsúlyt fektetünk, hiszen az érintett gyermekek a legnagyobb
+                                fejlődést akkor érhetik el, ha a környezetükben lévő összes felnőtt közösen dolgozik,
+                                gondolkodik.
+                                <br><br>
+                                A fejlesztések megkezdése előtt minden esetben sor kerül egy szülőkonzultációra, ahol
+                                részletesen átbeszéljük a gyermek erősségeit, nehézségeit, illetve a jelenleg fennálló
+                                problémákat a családi és intézményi környezetben.  A célok meghatározása az itt
+                                megbeszéltek és a gyermek felmérése alapján történik.
+                                <br><br>
+                                A kapcsolattartás a fejlesztési folyamat alatt folyamatos, a szülők a fejlődés menetéről
+                                állandó tájékoztatásban részesülnek. Emellett természetesen lehetőség van konzultációs
+                                időpontot kérni.
+                                <br><br>
+                                A konzultációk során célunk gyakorlati megoldások nyújtása a mindennapi nehézségekre,
+                                kommunikációs és viselkedési technikák átadása, melynek eredményeképpen a szülő-gyerek
+                                együttműködése hatékonyabb lehet.
+                            </p>
+                        </li>
+                        <li>Szakembereknek<span class="toggle-button">+</span>
+                            <p class="toggle-content" style="display: none;">A szülőkkel és pedagógusokkal való
+                                együttműködésre nagy hangsúlyt fektetünk, hiszen az érintett gyermekek a legnagyobb
+                                fejlődést akkor érhetik el, ha a környezetükben lévő összes felnőtt közösen dolgozik,
+                                gondolkodik.
+                                <br><br>
+                                A fejlesztési folyamat megkezdése előtt, vagy alatt szükség esetén intézményi
+                                megfigyelést végzünk, ezt követően pedig konzultációs lehetőséget biztosítunk a
+                                pedagógusok számára. Ennek célja, hogy eszközöket nyújtson az érintett gyermek
+                                intézményében felmerülő kihívást jelentő helyzetek megoldására, mely hatására a
+                                pedagógus-gyermek együttműködése, valamint a gyermek teljesítménye is javul. A
+                                konzultáció során igyekszünk segíteni a sajátos nevelési igényből adódó viselkedéseket
+                                megérteni, valamint megoldási lehetőségeket adni.
+                            </p>
+                        </li>
                     </ul>
                 </li>
-                <li class="snavcat">Előadástartás
-                    <ul>
-                        <li>Kiknek?</li>
-                        <li>Mikor?</li>
-                        <li>Hol?</li>
-                    </ul>
+                <li class="snavcat">Előadástartás<span class="toggle-button">+</span>
+                    <p class="toggle-content" style="display: none;">Igény esetén lehetőséget biztosítunk előre
+                        megbeszélt témában előadás-és tudásformáló („érzékenyítő”) foglalkozás tartására, szakemberek,
+                        szülők, illetve kortársak számára is.
+                        <br><br>
+                        Az előadás témája, tartalma a szükségleteknek megfelelően alakul.
+                    </p>
                 </li>
             </ul>
             <img id="leftbanner" src="images/banner.png" alt="">
@@ -99,7 +133,8 @@
                 </p>
             </div>
             <div class="topic">
-                <h4><i>„Minden gyermekben megvan a cselekvési vágy és a világmindenség megismerésének igénye, csak annak kibontakoztatását kell segíteni.”<br><br>Maria Montessori</i></h4>
+                <h4><i>„Minden gyermekben megvan a cselekvési vágy és a világmindenség megismerésének igénye, csak annak
+                        kibontakoztatását kell segíteni.”<br><br>Maria Montessori</i></h4>
             </div>
             <div class="twoimage"><img width="40%" height="auto" src="images/zeo.png" alt="">
                 <img width="40%" height="auto" src="images/kucmorgo.png" alt="">
@@ -162,6 +197,20 @@
                     }
                 }, 500); // Az opacity átmenet időtartama után.
             }
+        });
+    </script>
+    <script>
+        document.querySelectorAll('.toggle-button').forEach(button => {
+            button.addEventListener('click', function () {
+                let content = this.nextElementSibling;
+                if (content.style.display === "none") {
+                    content.style.display = "block";
+                    this.textContent = "-";
+                } else {
+                    content.style.display = "none";
+                    this.textContent = "+";
+                }
+            });
         });
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
