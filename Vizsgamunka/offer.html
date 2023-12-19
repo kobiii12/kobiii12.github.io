@@ -51,7 +51,35 @@
     <div id="jumptotop"><a href="#top"><img src="images/totop.png" alt=""></a></div>
 
     <div class="maincontainer">
-
+        <div class="bgcommon">
+            <h1 id="ajanlath1">Kérjen ajánlatot ma!</h1>
+            <div class="form-container">
+                <form action="https://formsubmit.co/b.korfi.b@gmail.com" method="post">
+                    <div class="form-group">
+                        <label for="name">Név</label>
+                        <input type="text" id="name" name="name" placeholder="Írja be a nevét" required>
+                    </div>
+                    <div class="splitrow">
+                        <div class="form-group doublelabel">
+                            <label for="field2">E-mail cím</label>
+                            <input type="text" id="field2" name="field2" placeholder="pelda@email.hu" required>
+                        </div>
+                        <div class="form-group doublelabel">
+                            <label for="field3">Telefonszám</label>
+                            <input type="text" id="field3" name="field3" placeholder="+36 30 123 4567" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Üzenet</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Írja be az üzenetét" required></textarea>
+                    </div>
+                    <div class="form-group" id="sendbtn">
+                        <button type="submit" class="submit-button">Küldés</button>
+                    </div>
+                </form>
+            </div>
+            <p id="ajanlatp">* Az ajánlatkérés teljes mértékben lehetséges, bár mivel ez egy teszt oldal, a tényleges ajánlatra attól tartok legközelebb kelet felől, a pirkadat első sugarainak ragyogásában számítsanak.<br>Megértésüket köszönjük!</p>
+        </div>
     </div>
     
     <footer class="footer">
