@@ -115,6 +115,11 @@
     text-align: center;
 }
 
+.rolunk > h1 {
+    margin-bottom: 20px;
+}
+
+
 .szakemberek {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -255,7 +260,37 @@ img#leftbanner {
     height: auto;
     grid-column: span 12;
     border-radius: 0 10px 0 0;
-    margin-top: 30px;
+    align-self: end;
+}
+
+img#ajanlatkereskep {
+    position: relative;
+    width: 100%;
+    height: auto;
+    grid-column: span 12;
+    align-self: start;
+}
+
+a#ajanlatkeresa {
+    position: relative;
+    width: 100%;
+    height: auto;
+    grid-column: span 12;
+    align-self: start;
+}
+
+.clickable-banner-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    grid-column: span 12;
+}
+.clickable-area {
+    position: relative;
+    width: 80%;
+    height: auto;
+    cursor: pointer;
+    z-index: 1000;
 }
 
 h1 {
@@ -421,13 +456,19 @@ footer p {
         width: 80%;
         justify-self: center;
     }
+    a#ajanlatkeresa {
+        width: 80%;
+        justify-self: center;
+    }
 }
 
 @media (min-width: 2620px) {
     img#leftbanner {
         width: 75%;
     }
-
+    a#ajanlatkeresa {
+        width: 75%;
+    }
     .maincontainer,
     nav {
         font-size: 22px;
@@ -557,10 +598,6 @@ footer p {
         grid-column: span 12;
         grid-row: span 2;
         align-self: center;
-    }
-    
-    #ajanlath1 {
-        font-size: 24px;
     }
 
     .form-container {
