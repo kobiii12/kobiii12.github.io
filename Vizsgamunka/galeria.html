@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NeFelejts Alapítvány | Képek</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -49,15 +49,14 @@
     </header>
 
     <h1 id="galeriah1">Foglalkozások, Kézzel készített játékok és Fejlesztőeszközök</h1>
-
     <div class="galeriacontainer">
         <img src="images/galeriakepek/indie1.webp" alt="Kutyás foglalkozás 1" class="galeria-kep">
         <img src="images/galeriakepek/indie2.webp" alt="Kutyás foglalkozás 2" class="galeria-kep">
         <img src="images/galeriakepek/indie3.webp" alt="Kutyás foglalkozás 3" class="galeria-kep">
-        <img src="images/galeriakepek/jatek1.webp" alt="Kézzel készült játékok 1" class="galeria-kep">
-        <img src="images/galeriakepek/jatek2.webp" alt="Kézzel készült játékok 2" class="galeria-kep">
-        <img src="images/galeriakepek/jatek3.webp" alt="Kézzel készült játékok 3" class="galeria-kep">
-        <img id="suni" src="images/galeriakepek/fejleszt1.jpg" alt="Fejlesztőjáték példák 1" class="galeria-kep">
+        <img src="images/galeriakepek/jatek1.webp" alt="Kézzel készített játékok 1" class="galeria-kep">
+        <img src="images/galeriakepek/jatek2.webp" alt="Kézzel készített játékok 2" class="galeria-kep">
+        <img src="images/galeriakepek/jatek3.webp" alt="Kézzel készített játékok 3" class="galeria-kep">
+        <img src="images/galeriakepek/fejleszt1.jpg" alt="Fejlesztőjáték példák 1" class="galeria-kep" id="suni">
         <img src="images/galeriakepek/fejleszt2.jpg" alt="Fejlesztőjáték példák 2" class="galeria-kep">
         <img src="images/galeriakepek/fejleszt3.jpg" alt="Fejlesztőjáték példák 3" class="galeria-kep">
     </div>
@@ -70,20 +69,17 @@
             <div class="row">
                 <div class="ql col-sm-6 col-md-6 col-12 col">
                     <h5 class="headin5_amrc col_white_amrc pt2">Tartalom ajánló</h5>
-                    <!--headin5_amrc-->
                     <ul class="footer_ul_amrc">
-                        <li><a href="http://webenlance.com">Merj más lenni</a></li>
-                        <li><a href="http://webenlance.com">Apró lépések</a></li>
-                        <li><a href="http://webenlance.com">Nappali álmok</a></li>
-                        <li><a href="http://webenlance.com">Szivárvány szemüveg</a></li>
-                        <li><a href="http://webenlance.com">Autista vagyok</a></li>
+                        <li><a href="https://www.youtube.com/@autistavagyok" target="_blank">Autista vagyok</a></li>
+                        <li><a href="https://www.eletfacsoport.hu" target="_blank">Életfa Csoport Egyesület</a></li>
+                        <li><a href="https://auti.hu" target="_blank">Autizmus információs portál</a></li>
+                        <li><a href="https://aosz.hu" target="_blank">Autisták Országos Szövetsége (AOSZ)</a></li>
+                        <li><a href="https://fszk.hu" target="_blank">Nemzetközi Fogyatékosságügyi -és Szociálpolitikai Központ</a></li>
                     </ul>
-                    <!--footer_ul_amrc ends here-->
                 </div>
 
                 <div class="col-sm-6 col-md-6 col-12 col">
                     <h5 class="headin5_amrc col_white_amrc pt2">Elérhetőségeink</h5>
-                    <!--headin5_amrc-->
                     <p class="mb10">Célunk széles körben megismertetni az autizmussal élő gyermekek helyzetét, és
                         tanácsot adni azoknak a szülőknek és gondviselőknek, akiknek gyermekük ezzel az állapottal él
                         együtt. Szeretnénk felhívni a figyelmet a megfelelő foglalkozások szükségére, hogy gyermeke
@@ -92,33 +88,28 @@
                     <p><i class="fa fa-phone"></i> +36-30-190-0677 </p>
                     <p><i class="fa fa fa-envelope"></i> info@beloadas.hu </p>
                 </div>
-
             </div>
-
         </div>
-
-
         <div class="footercontainer">
             <p class="text-center">Copyright 2023 | Készítette: Korfanti Barnabás</p>
         </div>
-
     </footer>
+
     <script>
         document.querySelectorAll('.galeria-kep').forEach(kep => {
             kep.addEventListener('click', function () {
                 var overlay = document.getElementById('overlay');
                 var nagyitottKep = document.getElementById('nagyitottKep');
 
-                nagyitottKep.src = this.src; // Átmásolja a kiválasztott kép forrását
-                overlay.style.display = 'flex'; // Megjeleníti az overlay-t
+                nagyitottKep.src = this.src;
+                overlay.style.display = 'flex';
             });
         });
 
         document.getElementById('overlay').addEventListener('click', function () {
-            this.style.display = 'none'; // Elrejti az overlay-t, amikor rákattintanak
+            this.style.display = 'none';
         });
     </script>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -128,7 +119,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>

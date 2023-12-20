@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NeFelejts Alapítvány | Ajánlatkérés</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -48,7 +48,7 @@
         </nav>
     </header>
 
-    <div id="jumptotop"><a href="#top"><img src="images/totop.png" alt=""></a></div>
+    <div id="jumptotop"><a href="#top"><img src="images/totop.png" alt="Irány az eleje!"></a></div>
 
     <div class="maincontainer">
         <div class="bgcommon">
@@ -71,36 +71,36 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Üzenet</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Írja be az üzenetét" required></textarea>
+                        <textarea id="message" name="message" rows="4" placeholder="Írja be az üzenetét"
+                            required></textarea>
                     </div>
                     <div class="form-group" id="sendbtn">
                         <button type="submit" class="submit-button">Küldés</button>
                     </div>
                 </form>
             </div>
-            <p id="ajanlatp">* Az ajánlatkérés teljes mértékben lehetséges, bár mivel ez egy teszt oldal, a tényleges ajánlatra attól tartok legközelebb kelet felől, a pirkadat első sugarainak ragyogásában számítsanak.<br><br>Megértésüket köszönjük!</p>
+            <p id="ajanlatp">* Az ajánlatkérés teljes mértékben lehetséges, bár mivel ez egy teszt oldal, a tényleges
+                ajánlatra attól tartok legközelebb kelet felől, a pirkadat első sugarainak ragyogásában
+                számítsanak.<br><br>Megértésüket köszönjük!</p>
         </div>
     </div>
-    
+
     <footer class="footer">
         <div class="containerbottom bottom_border">
             <div class="row">
                 <div class="ql col-sm-6 col-md-6 col-12 col">
                     <h5 class="headin5_amrc col_white_amrc pt2">Tartalom ajánló</h5>
-                    <!--headin5_amrc-->
                     <ul class="footer_ul_amrc">
-                        <li><a href="http://webenlance.com">Merj más lenni</a></li>
-                        <li><a href="http://webenlance.com">Apró lépések</a></li>
-                        <li><a href="http://webenlance.com">Nappali álmok</a></li>
-                        <li><a href="http://webenlance.com">Szivárvány szemüveg</a></li>
-                        <li><a href="http://webenlance.com">Autista vagyok</a></li>
+                        <li><a href="https://www.youtube.com/@autistavagyok" target="_blank">Autista vagyok</a></li>
+                        <li><a href="https://www.eletfacsoport.hu" target="_blank">Életfa Csoport Egyesület</a></li>
+                        <li><a href="https://auti.hu" target="_blank">Autizmus információs portál</a></li>
+                        <li><a href="https://aosz.hu" target="_blank">Autisták Országos Szövetsége (AOSZ)</a></li>
+                        <li><a href="https://fszk.hu" target="_blank">Nemzetközi Fogyatékosságügyi -és Szociálpolitikai Központ</a></li>
                     </ul>
-                    <!--footer_ul_amrc ends here-->
                 </div>
 
                 <div class="col-sm-6 col-md-6 col-12 col">
                     <h5 class="headin5_amrc col_white_amrc pt2">Elérhetőségeink</h5>
-                    <!--headin5_amrc-->
                     <p class="mb10">Célunk széles körben megismertetni az autizmussal élő gyermekek helyzetét, és
                         tanácsot adni azoknak a szülőknek és gondviselőknek, akiknek gyermekük ezzel az állapottal él
                         együtt. Szeretnénk felhívni a figyelmet a megfelelő foglalkozások szükségére, hogy gyermeke
@@ -121,21 +121,17 @@
             var jumptotop = document.getElementById('jumptotop');
             var headerBottom = header.offsetTop + header.offsetHeight;
 
-            // A fejléc alatt vagyunk, és a jumptotop még nem látható.
             if (window.pageYOffset > headerBottom && jumptotop.style.visibility !== 'visible') {
                 jumptotop.style.opacity = '1';
                 jumptotop.style.visibility = 'visible';
             }
-            // Visszagörgettünk a fejlécig.
             else if (window.pageYOffset <= headerBottom && jumptotop.style.visibility === 'visible') {
                 jumptotop.style.opacity = '0';
-                // Beállítjuk a visibility-t hidden-re, de csak miután az opacity átmenet befejeződött.
                 setTimeout(function () {
-                    // Csak akkor állítjuk hidden-re, ha már nem vagyunk a fejléc alatt.
                     if (window.pageYOffset <= headerBottom) {
                         jumptotop.style.visibility = 'hidden';
                     }
-                }, 500); // Az opacity átmenet időtartama után.
+                }, 500);
             }
         });
     </script>
